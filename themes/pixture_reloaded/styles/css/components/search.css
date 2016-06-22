@@ -1,0 +1,46 @@
+/**
+ * Search results pages
+ ========================================================================== */
+.search-results {
+  padding: 0;
+}
+.search-results p {
+  margin: 0;
+}
+
+/**
+ * Search forms
+ * - search block form
+ * - advanced search form
+ ========================================================================== */
+.block-search .form-type-search,
+.block-search .form-actions {
+  display: inline-block;
+  margin: 7px 0;
+  margin: 0.43162rem 0;
+}
+
+.search-form .container-inline label {
+  display: block;
+  margin: 7px 0;
+  margin: 0.43162rem 0;
+}
+
+.form-type-search input.form-search {
+  width: 100%;
+}
+
+.search-page-form #edit-basic {
+  display: block;
+}
+.search-page-form #edit-basic .form-type-search,
+.search-page-form #edit-basic .form-search {
+  display: block;
+  width: 100%;
+  margin: 7px 0;
+  margin: 0.43162rem 0;
+}
+.search-page-form #edit-advanced .details-wrapper > fieldset > legend {
+  display: none;
+}
+/*# sourceMappingURL=search.css.map */

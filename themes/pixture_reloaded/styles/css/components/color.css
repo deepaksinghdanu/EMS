@@ -1,0 +1,723 @@
+/**
+ * Color
+ ========================================================================== */
+/**
+ * base.elements
+ ========================================================================== */
+html,
+body {
+  background-color: #ffffff;
+}
+
+body {
+  color: #555555;
+}
+
+a {
+  color: #0066cc;
+}
+a:visited {
+  color: #0066cc;
+}
+a:active, a.active {
+  color: #0066cc;
+}
+a:hover, a:focus {
+  color: #0066cc;
+}
+
+blockquote {
+  border-color: #e9e9e9;
+}
+blockquote p:first-child:before {
+  color: #e9e9e9;
+}
+blockquote small {
+  color: #626262;
+}
+blockquote.pull-right {
+  border-right-color: #e9e9e9;
+}
+
+hr {
+  border-color: #e9e9e9;
+}
+
+/**
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+}
+
+::selection {
+  background: #b3d4fc;
+}
+
+/**
+ * Page
+ *  - mainly for markup that is printed directly in page.html.twig and
+ *    .l-r {}
+ ========================================================================== */
+.page {
+  background-color: #7bc0ea;
+  background-image: -webkit-linear-gradient(#7bc0ea 0%, #ffffff 100%);
+  background-image: linear-gradient(#7bc0ea 0%, #ffffff 100%);
+}
+
+.l-rw {
+  background-color: #ffffff;
+}
+
+.pr-header .regions {
+  background-color: #025fb1;
+  background-image: -webkit-linear-gradient(#025fb1 0%, #62c8fd 100%);
+  background-image: linear-gradient(#025fb1 0%, #62c8fd 100%);
+  color: #555555;
+}
+
+.pr-navbar .regions {
+  background-color: #013665;
+  color: #fffffe;
+}
+.pr-navbar a,
+.pr-navbar .menu a {
+  color: inherit;
+}
+
+.pr-features .regions {
+  background-color: #d3d3d3;
+  color: #555555;
+}
+
+.pr-tertiary .regions {
+  background-color: #d3d3d3;
+  color: #555555;
+}
+
+.pr-footer .regions {
+  background-color: #181818;
+  background-image: -webkit-linear-gradient(#181818 0%, #343434 100%);
+  background-image: linear-gradient(#181818 0%, #343434 100%);
+  color: #d5d5d5;
+}
+.pr-footer a,
+.pr-footer .menu a {
+  color: inherit;
+}
+.pr-footer a.active, .pr-footer a:hover, .pr-footer a:focus,
+.pr-footer .menu a.active,
+.pr-footer .menu a:hover,
+.pr-footer .menu a:focus {
+  color: inherit;
+}
+
+.attribution .l-rw {
+  background-color: transparent;
+}
+.attribution .attribution__link {
+  color: #555555;
+}
+
+/**
+ * Branding styles
+ *  - Drupal core branding block.
+ ========================================================================== */
+.site-branding__name-link {
+  color: #feffff;
+}
+.site-branding__name-link:visited, .site-branding__name-link:active {
+  color: #feffff;
+}
+.site-branding__slogan {
+  color: #fefefe;
+}
+
+/**
+ * Blocks
+ ========================================================================== */
+.color-blocks-region .block,
+.color-block {
+  color: #555555;
+  background-color: #d8ecf9;
+}
+.color-blocks-region .block h2[class*="__title"],
+.color-block h2[class*="__title"] {
+  color: #fffffc;
+  background-color: #82c3eb;
+}
+.color-blocks-region .block a,
+.color-block a {
+  color: #0066cc;
+}
+.color-blocks-region .block a:link, .color-blocks-region .block a:visited,
+.color-block a:link,
+.color-block a:visited {
+  color: #0066cc;
+}
+.color-blocks-region .block a:active, .color-blocks-region .block a.active,
+.color-block a:active,
+.color-block a.active {
+  color: #0066cc;
+}
+.color-blocks-region .block a:hover, .color-blocks-region .block a:focus,
+.color-block a:hover,
+.color-block a:focus {
+  color: #0066cc;
+}
+
+/**
+ * Menus
+ *  - style Drupal core block menus.
+ *  - for the drop menu and other responsive menus see the mixins and the
+ *    _navbar.scss partial.
+ ========================================================================== */
+.menu li.collapsed > a:after, .menu li.expanded > a:after {
+  color: #555555;
+}
+.menu a {
+  color: #0066cc;
+}
+.menu a:hover, .menu a:focus {
+  color: #0066cc;
+}
+.menu a.active {
+  color: #0066cc;
+}
+
+/**
+ * Responsive menu styles.
+ *
+ * Mixins provide the basic struture and a base style (not much), the rest
+ * is up to you, add colors, borders, padding and so on. Icons such as
+ * the hamburger and arrows are set in variables in _variables.scss, and you
+ * use the color varaibles for menus from there also.
+ *
+ * Menu styles are set in Appearance settings using the Responsive Menus extension.
+ * There you select a block, breakpoint, a default style and a responsive style.
+ * You can safely remove mixins from this file if you not going to use them later
+ * on, and want to save a few bytes in stylsheet size.
+ *
+ * Each mixin takes one or more parameters. Use these to customize the basic struture
+ * of the menu, or call options, for example you can place the offcanvas menu on the
+ * left or right.
+ *
+ * Do not import into breakpoints unless you are not using the Responsive Menu
+ * settings in Appearance Extensions, in which case you will need to load the
+ * at_core/at.responsivemenus library and provide it's required drupalSettings.
+ *
+ * Breakpoints are handled in matchMedia using Enquire.
+ *
+ * Responsive styles are a combination of three things:
+ *  1. Sass/CSS defined here (with breakpoints etc).
+ *  2. jQuery: responsive-menus.js in AT Core libraries which adds/toggles classes.
+ *  3. Theme settings as set in your themes Advanced extention settings.
+ ========================================================================== */
+.rm-block,
+.rm-block * {
+  background-color: #013665;
+  color: #fffffe;
+}
+
+.rm-toggle span {
+  background: transparent;
+}
+
+.rm-block__content .menu li.active-trail > a {
+  color: #fffffe;
+  background: rgba(255, 255, 255, 0.3);
+}
+.rm-block__content .menu a {
+  color: #fffffe;
+  background: #013665;
+}
+.rm-block__content .menu a:active {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  opacity: 0.9;
+}
+.rm-block__content .menu a:visited {
+  color: #fffffe;
+}
+.rm-block__content .menu a:hover, .rm-block__content .menu a:focus {
+  color: #fffffe;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.rm-block__content .menu a.active {
+  color: #fffffe;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.rm-block__content .menu a.active[href="/"] {
+  background-color: transparent;
+}
+.rm-block__content .menu a.active[href="/"]:hover, .rm-block__content .menu a.active[href="/"]:focus {
+  color: #fffffe;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ms-offcanvas .rm-block__content {
+  opacity: .001;
+  background-color: #7bc0ea;
+  color: #7bc0ea;
+}
+
+.ms-tiles .rm-block__content .menu-level-1 > li {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ms-flipslide.rm-is-open .rm-block__content .menu-level-1 > li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.ms-flipslide.rm-is-open .rm-block__content .menu-level-1 > li > a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/**
+ * Breadcrumbs
+ ========================================================================== */
+.breadcrumb li:before {
+  color: #e9e9e9;
+}
+.breadcrumb a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/**
+ * Tables
+ * Base styles.
+ ========================================================================== */
+table {
+  border-color: #e9e9e9;
+}
+
+/**
+ * Table Theme
+ * Style Drupal selectors for tables.
+ ========================================================================== */
+tr {
+  border-color: #e9e9e9;
+}
+
+thead tr {
+  color: #555555;
+  background-color: #ededed;
+}
+
+tr,
+td,
+th {
+  border-color: #e9e9e9;
+}
+
+/**
+ * Forms
+ *  - This probably seems like a lot - remember AT unsets system.theme.css and
+ *    gives you complete control over all form elements.
+ *
+ * Note:
+ *  - input type submit is treated as a 'button', see _buttons.scss
+ *  - for drop buttons see _buttons.scss
+ ========================================================================== */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  color: #6e6e6e;
+  border-color: #e9e9e9;
+  background-color: #ffffff;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: #e9e9e9;
+  color: #555555;
+}
+textarea:hover, textarea:focus,
+select:hover,
+select:focus,
+input[type="date"]:hover,
+input[type="date"]:focus,
+input[type="datetime"]:hover,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:hover,
+input[type="datetime-local"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="month"]:hover,
+input[type="month"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="search"]:hover,
+input[type="search"]:focus,
+input[type="tel"]:hover,
+input[type="tel"]:focus,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="time"]:hover,
+input[type="time"]:focus,
+input[type="url"]:hover,
+input[type="url"]:focus,
+input[type="week"]:hover,
+input[type="week"]:focus {
+  background-color: white;
+}
+textarea[disabled]:hover, textarea[disabled]:focus,
+select[disabled]:hover,
+select[disabled]:focus,
+input[type="date"][disabled]:hover,
+input[type="date"][disabled]:focus,
+input[type="datetime"][disabled]:hover,
+input[type="datetime"][disabled]:focus,
+input[type="datetime-local"][disabled]:hover,
+input[type="datetime-local"][disabled]:focus,
+input[type="email"][disabled]:hover,
+input[type="email"][disabled]:focus,
+input[type="month"][disabled]:hover,
+input[type="month"][disabled]:focus,
+input[type="number"][disabled]:hover,
+input[type="number"][disabled]:focus,
+input[type="password"][disabled]:hover,
+input[type="password"][disabled]:focus,
+input[type="search"][disabled]:hover,
+input[type="search"][disabled]:focus,
+input[type="tel"][disabled]:hover,
+input[type="tel"][disabled]:focus,
+input[type="text"][disabled]:hover,
+input[type="text"][disabled]:focus,
+input[type="time"][disabled]:hover,
+input[type="time"][disabled]:focus,
+input[type="url"][disabled]:hover,
+input[type="url"][disabled]:focus,
+input[type="week"][disabled]:hover,
+input[type="week"][disabled]:focus {
+  color: #555555;
+}
+
+/**
+ * Collapsible details.
+ *
+ * @see collapse.js
+ * @thanks http://nicolasgallagher.com/css-background-image-hacks/
+ */
+details {
+  border-color: #e9e9e9;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background: #ededed;
+  color: #555555;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  background: #ededed;
+  color: #555555;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #6e6e6e;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #6e6e6e;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #6e6e6e;
+}
+
+/**
+ * Form Theme
+ ========================================================================== */
+.filter-wrapper {
+  border-color: #e9e9e9;
+}
+
+.tips {
+  color: #6e6e6e;
+}
+
+.description {
+  color: #6e6e6e;
+}
+
+.marker {
+  color: #ee0000;
+}
+
+.form-required:after {
+  color: #ee0000;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border-color: #f9c9bf;
+}
+
+/**
+ * Buttons
+ * We include button styling seperate (from _forms.scss) mainly because the form
+ * styles are quite long already and we often want to add unique button variants.
+ *
+ *  - applies to elements with class "button", includes styles for:
+ *  - input buttons
+ *  - anchor links styled as buttons
+ *  - drop buttons
+ *  - action link buttons
+ ========================================================================== */
+button,
+.button {
+  color: #555555;
+  background: #fafafa;
+  border-color: #e9e9e9;
+  opacity: 0.9;
+}
+button:hover, button:focus,
+.button:hover,
+.button:focus {
+  opacity: 1;
+  color: #555555;
+  background-color: #f2f2f2;
+}
+button[disabled]:hover,
+.button[disabled]:hover {
+  color: #4d4d4d;
+}
+
+.button--primary {
+  color: #fffffe;
+  background-color: #7bc0ea;
+  border-color: #d3d3d3;
+}
+.button--primary:link, .button--primary:visited {
+  color: #fffffe;
+  background-color: #7bc0ea;
+  border-color: #d3d3d3;
+}
+.button--primary:hover, .button--primary:focus, .button--primary:active, .button--primary.active {
+  color: #fffffe;
+  background-color: #65b5e7;
+  border-color: #c6c6c6;
+}
+
+.button--danger {
+  color: #a51b00;
+  background-color: transparent;
+  border-color: transparent;
+}
+.button--danger:link, .button--danger:visited {
+  color: #a51b00;
+  background-color: transparent;
+  border-color: transparent;
+}
+.button--danger:hover, .button--danger:focus, .button--danger:active, .button--danger.active {
+  color: #a51b00;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.button-action {
+  opacity: 1;
+}
+
+/* Drop buttons */
+.js .dropbutton-widget {
+  background-color: #7bc0ea;
+  border-color: #e9e9e9;
+}
+
+.dropbutton .secondary-action {
+  border-top-color: #e9e9e9;
+}
+.dropbutton .secondary-action .button {
+  background: #7bc0ea;
+}
+.dropbutton .dropbutton-toggle button:hover {
+  background: transparent;
+}
+
+.dropbutton-multiple .dropbutton {
+  border-right-color: #e9e9e9;
+}
+.dropbutton-multiple .dropbutton .publish .button {
+  color: #fffffe;
+  background-color: #7bc0ea;
+  border-color: #d3d3d3;
+}
+.dropbutton-multiple .dropbutton .publish .button:link, .dropbutton-multiple .dropbutton .publish .button:visited {
+  color: #fffffe;
+  background-color: #7bc0ea;
+  border-color: #d3d3d3;
+}
+.dropbutton-multiple .dropbutton .publish .button:hover, .dropbutton-multiple .dropbutton .publish .button:focus, .dropbutton-multiple .dropbutton .publish .button:active, .dropbutton-multiple .dropbutton .publish .button.active {
+  color: #fffffe;
+  background-color: #65b5e7;
+  border-color: #c6c6c6;
+}
+[dir="rtl"] .dropbutton-multiple .dropbutton {
+  border-left-color: #e9e9e9;
+}
+.dropbutton-multiple.open .dropbutton-action .button {
+  border-radius: 0 0 0 0;
+}
+.dropbutton-multiple .dropbutton .secondary-action .button {
+  border-radius: 0 0 0 0;
+}
+.dropbutton-multiple .dropbutton .secondary-action .button:hover, .dropbutton-multiple .dropbutton .secondary-action .button:focus {
+  border-radius: 0 0 0 0;
+}
+
+/**
+ * File icons
+ * AT unsets Drupal core file field CSS for image icons and replaces them
+ * with FontAwesome icons.
+ ========================================================================== */
+.file a:before {
+  color: #555555;
+}
+
+/**
+ * Field Taxonomy Reference
+ ========================================================================== */
+/**
+ * Labels.
+ *  -  for example "new" mark on comments, tags etc.
+ *
+ *  TODO: fix this stuff up, its just a copy/paste from system.theme.css at the moment.
+ ========================================================================== */
+.filter-help a:after,
+.more-help-link a:after {
+  color: #e9e9e9;
+}
+
+/**
+ * Content Types (nodes)
+ *  - in Drupal a content type is a bunch of fields we use to enter and display
+ *    content, such as pages, blog posts, forum posts and so on. Each of those
+ *    is usually a content type you create in the Drupal admin.
+ *  - an instance of a content type (e.g. a single blog post) is called a node,
+ *    the root template is called node.html.twg and the base selector is .node {}
+ ========================================================================== */
+.node--sticky {
+  background-color: #f7f7f7;
+}
+
+.node--view-mode-teaser {
+  border-color: #e9e9e9;
+}
+.node--view-mode-teaser .node__title {
+  border-color: #e9e9e9;
+}
+
+.node .field-type-image figure,
+.node .field-type-image figure figcaption {
+  border-color: #e9e9e9;
+}
+
+/**
+ * Messages
+ *  - style system messages such as status, warning and error.
+ ========================================================================== */
+/* Success (status) */
+.messages--status,
+table tr.ok {
+  background-color: #f3faef;
+}
+
+.messages--status,
+.ok {
+  color: #325e1c;
+}
+
+/* Warning */
+.messages--warning,
+table tr.warning {
+  background-color: #fdf8ed;
+}
+
+.messages--warning,
+.warning {
+  color: #734c00;
+}
+
+/* Error */
+.messages--error,
+table tr.error {
+  background-color: #fcf4f2;
+}
+
+.messages--error,
+.error {
+  color: #a51b00;
+}
+
+.dev-query {
+  color: #7bc0ea;
+}
+
+body > pre,
+.xdebug-var-dump {
+  color: #555555;
+}
+
+.page .xdebug-var-dump {
+  color: #555555;
+}
+
+body:before {
+  color: #a51b00;
+}
+
+/**
+ * Utility/Misc
+ * - misc utility classes that don't really fit anywhere else.
+ ========================================================================== */
+[class*="unpublished"] {
+  background-color: #ffdbdb;
+}
+[class*="unpublished"] p.unpublished {
+  color: #fff4f4;
+}
+
+[class*="preview"] {
+  background-color: #ffffea;
+}
+/*# sourceMappingURL=color.css.map */

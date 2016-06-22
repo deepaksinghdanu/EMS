@@ -1,0 +1,53 @@
+/**
+ * Blocks
+ * Base styles for block templates.
+ ========================================================================== */
+
+// Almost everything in Druapl 8 is a block, so these classes are very generic
+// and it can be dangerous to add styles like font-size or colors.
+.block {
+  @include output-rhythm(margin, $x-large 0);
+}
+
+.block__title {}
+
+// The block has a title.
+.block.has-title {}
+
+// Note, Menu blocks use .block-menu__content, see below.
+.block__content {
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+.color-blocks-region .block,
+.color-block {
+
+  h2[class*="__title"] {
+    margin: 0;
+    line-height: 1;
+  }
+
+  h2[class*="__title"],
+  div[class*="__content"]  {
+    @include output-rhythm(padding, $xx-small);
+  }
+
+  a {
+
+    &:link,
+    &:visited {
+    }
+
+    &:active,
+    &.active {
+    }
+
+    &:hover,
+    &:focus {
+    }
+  }
+}

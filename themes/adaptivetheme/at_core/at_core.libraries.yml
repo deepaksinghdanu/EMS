@@ -1,0 +1,261 @@
+at.settings:
+  version: "8.x-1.0"
+  drupalSettings:
+    # These placeholder values will be set by system_js_settings_alter().
+    ajaxPageState:
+      theme: null
+
+# Window size widget (AT Core)
+at.windowsize:
+  version: "8.x-1.0"
+  css:
+    component:
+      styles/css/at.windowSize.css: {}
+  js:
+    scripts/min/at.windowSize.min.js: { minified: true }
+    #scripts/at.windowSize.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+# matchHeight
+at.matchheight:
+  version: "0.5.2"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/liabru/jquery-match-height/master/LICENSE
+    gpl-compatible: true
+  js:
+    scripts/min/jquery.matchHeight.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+# enquire
+at.enquire:
+  version: "2.1.2"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/WickyNilliams/enquire.js/master/LICENSE
+    gpl-compatible: true
+  js:
+    scripts/min/enquire.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/matchmedia
+
+# doubleTapToGo
+at.doubletaptogo:
+  version: "1.0.0"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/dachcom-digital/jquery-doubleTapToGo/master/LICENSE
+    gpl-compatible: true
+  js:
+    scripts/min/doubleTapToGo.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+# Fastclick
+at.fastclick:
+  version: "1.0.3"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/ftlabs/fastclick/master/LICENSE
+    gpl-compatible: true
+  js:
+    scripts/min/fastclick.min.js: { minified: true }
+    #scripts/fastclick.js: {}
+  dependencies:
+    - core/jquery
+
+# Fastclick initialize
+at.fastclick_initialize:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.fastclickInitialize.min.js: { minified: true }
+    #scripts/at.fastclickInitialize.js: {}
+  dependencies:
+    - at_core/at.fastclick
+    #- core/jquery
+
+# Fontfaceobserver
+# https://github.com/bramstein/fontfaceobserver
+at.fontfaceobserver:
+  version: "1.5.4"
+  license:
+    name: BSD
+    url: https://raw.githubusercontent.com/bramstein/fontfaceobserver/master/LICENSE
+    gpl-compatible: true
+  js:
+    scripts/min/fontfaceobserver.min.js: { minified: true }
+    #scripts/fontfaceobserver.js: {}
+
+# Breakpoints
+at.breakpoints:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.breakpoints.min.js: { minified: true }
+    #scripts/at.breakpoints.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/matchmedia
+    - at_core/at.enquire
+
+# Layout
+at.layout:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.layout.min.js: { minified: true }
+    #scripts/at.layout.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/matchmedia
+    - core/jquery.once
+  weight: -1000
+
+# Responsive Menus
+at.responsivemenus:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.responsiveMenus.min.js: { minified: true }
+    #scripts/at.responsiveMenus.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/matchmedia
+    - at_core/at.enquire
+    - core/modernizr
+
+# Responsive Tables
+at.responsivetables:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.responsiveTables.min.js: { minified: true }
+    #scripts/at.responsiveTables.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+# Responsive Lists
+at.responsivelists:
+  version: "8.x-1.0"
+  js:
+    scripts/min/at.responsiveLists.min.js: { minified: true }
+    #scripts/at.responsiveLists.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/matchmedia
+    - core/jquery.once
+    - core/drupal.debounce
+    - core/modernizr
+
+# Slidedshow
+# https://github.com/woothemes/FlexSlider
+at.slideshow:
+  version: "2.3.0"
+  licence:
+    name: GNU-GPL-2.0
+    url: https://raw.githubusercontent.com/woothemes/FlexSlider/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    scripts/min/jquery.flexslider.min.js: { minified: true }
+    scripts/min/at.flexsliderSettings.min.js: { minified: true }
+    #scripts/jquery.flexslider.js: {}
+    #scripts/at.flexsliderSettings.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+# Typekit loader
+at.typekit:
+  version: "8.x-1.0"
+  header: true
+  weight: 1000
+  js:
+    scripts/min/at.typekit.min.js: { minified: true }
+    #scripts/at.typekit.js: {}
+
+# Video - responsive YouTube and Vimeo iframes. This is pretty rough
+# and only works OK, the CSS method in the UIKit is better.
+at.responsivevideo:
+  version: "8.x-1.0"
+  js:
+    scripts/at.responsiveVideo.min.js: {}
+    #scripts/at.responsiveVideo.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+# Respond TODO: test with respond in IE8.
+at.respond:
+  version: "1.0.0"
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/scottjehl/Respond/master/LICENSE-MIT
+    gpl-compatible: true
+  js:
+    scripts/min/respond.min.js: { minified: true, browsers: { IE: 'lte IE 8', '!IE': false } }
+
+# Selectivizr TODO: test with IE8.
+at.selectivizr:
+  version: "1.0.2"
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/mit-license.php
+    gpl-compatible: true
+  js:
+    scripts/min/at.selectivizr.min.js: { minified: true, browsers: { IE: 'lte IE 8', '!IE': false } }
+  dependencies:
+    - at_core/at.yui3
+
+# test with YUI3 for selectivizr
+at.yui3:
+  remote: https://github.com/yui/yui3
+  version: "3.18.0"
+  license:
+    name: BSD
+    url: https://raw.githubusercontent.com/yui/yui3/master/LICENSE.md
+    gpl-compatible: true
+
+  js:
+    http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js:  { type: external, browsers: { IE: 'lte IE 8', '!IE': false } }
+
+# AT Core libs for theme dev.
+at.devel_debug_layout:
+  version: "8.x-1.0"
+  css:
+    theme:
+      styles/css/at.devel.debug.layout.css: {}
+
+at.devel_colorize_regions:
+  version: "8.x-1.0"
+  css:
+    theme:
+      styles/css/at.devel.colorize.regions.css: {}
+
+at.devel_nuke_toolbar:
+  version: "8.x-1.0"
+  css:
+    theme:
+      styles/css/at.devel.nuke.toolbar.css: {}
+
+# Appearance settings scripts
+at.appearance_settings:
+  version: "8.x-1.0"
+  css:
+    theme:
+      styles/css/at.appearance.css: {}
+  js:
+    scripts/min/at.appearance.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal

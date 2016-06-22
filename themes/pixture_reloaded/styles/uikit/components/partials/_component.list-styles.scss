@@ -1,0 +1,52 @@
+/**
+ * List Styles
+ *  - Prestyled classes for embedding in content lists or applying to
+ *    views output (needs tests for views).
+ ========================================================================== */
+
+// Simple horizontal list, see: mixins/_list.scss.
+.list-horizontal {
+  @include list-horizontal($flow-from);
+}
+
+
+// Simple horizontal list, see: mixins/_list.scss.
+.list-multicolumn {
+  padding: 0;
+  @include no-bullets;
+  @include clearfix-micro;
+
+  > li {
+    font-weight: $font-weight-bold;
+  }
+
+  ul, ol {
+    font-weight: $font-weight-normal;
+    padding: 0;
+  }
+}
+
+@media #{$mobile} {
+  @include list-multicolumn('.list-multicolumn', 12em);
+}
+
+
+// Horizontal description lists, adjust the media query to suit.
+@media #{$mobile} {
+  .dl-horizontal {
+    dt {
+      float: $flow-from;
+      clear: $flow-from;
+      text-align: $flow-from;
+      width: 11em;
+
+      &:after {
+        content: ":";
+      }
+    }
+    dd {
+      margin-#{$flow-from}: 12em;
+      @include cf;
+    }
+  }
+}

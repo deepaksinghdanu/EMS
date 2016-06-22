@@ -1,0 +1,135 @@
+/**
+ * Messages
+ *  - style system messages such as status, warning and error.
+ ========================================================================== */
+
+.messages {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  @include output-rhythm(padding, $medium);
+
+  &+ .messages {
+    margin-top: $large;
+    @include margin-leader(1, $medium);
+  }
+
+  .container {
+    box-sizing: border-box;
+  }
+}
+
+.messages__list {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+  &+ .messages__item {
+    @include margin-leader(1, $medium);
+  }
+
+  .item-list ul {
+    @include output-rhythm(margin, $large $xx-large);
+
+    li {
+      list-style: square;
+    }
+  }
+}
+
+
+/* Success (status) */
+.messages--status,
+table tr.ok {
+}
+
+.messages--status,
+.ok {
+}
+
+.messages--status {
+}
+
+
+/* Warning */
+.messages--warning,
+table tr.warning {
+}
+
+.messages--warning,
+.warning {
+}
+
+.messages--warning {
+}
+
+
+/* Error */
+.messages--error,
+table tr.error {
+}
+
+.messages--error,
+.error {
+}
+
+.messages--error {
+}
+
+
+// All, background image?
+.messages--status,
+.messages--warning,
+.messages--error {
+  background-image: none;
+}
+
+
+/* RTL */
+[dir="rtl"] .messages {
+  text-align: right;
+}
+
+
+/* Message icons */
+.messages .icon:before {
+  font-family: FontAwesome, sans-serif;
+  float: left;
+  vertical-align: top;
+  @include output-rhythm(padding, 0 $small 0 0); // LTR
+}
+
+[dir="rtl"] .messages .icon:before {
+  @include output-rhythm(padding, 0 0 0 $small);
+  float: right;
+}
+
+.icon-status:before {
+  content: $messages-icon-status;
+}
+
+.icon-warning:before {
+  content: $messages-icon-warning ;
+}
+
+.icon-error:before {
+  content: $messages-icon-error;
+}
+
+
+// Devel query messages
+.dev-query {}
+
+// xdebug-var-dump
+body > pre,
+.xdebug-var-dump {}
+
+.page {
+  .xdebug-var-dump {}
+}
+
+// SASS errors
+body {
+  &:before {}
+}
+

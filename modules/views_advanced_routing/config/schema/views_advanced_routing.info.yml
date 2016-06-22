@@ -1,0 +1,24 @@
+views.display_extender.views_advanced_routing_route:
+  type: mapping
+  mapping:
+    route:
+      type: mapping
+      mapping:
+        defaults:
+          type: sequence
+          sequence:
+            - type: string
+        requirements:
+          type: sequence
+          sequence:
+            - type: string
+        options:
+          type: string
+          sequence:
+            - type: string
+
+# Information added by Drupal.org packaging script on 2016-03-16
+version: '8.x-1.0-rc1'
+core: '8.x'
+project: 'views_advanced_routing'
+datestamp: 1458102854

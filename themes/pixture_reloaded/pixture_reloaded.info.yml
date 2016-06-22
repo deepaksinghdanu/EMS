@@ -1,0 +1,42 @@
+name: 'Pixture Reloaded'
+type: theme
+base theme: at_core
+subtheme type: adaptive_subtheme
+layout: site-builder
+description: 'Pixture Reloaded is colorable theme with many style settings. This theme requires Adaptivetheme 8.x (base theme: at_core)'
+alt text: 'Screenshot for Pixture Reloaded'
+tags: 'adaptivetheme, color module, theme settings, responsive'
+# core: 8.x
+regions:
+  leaderboard: 'Leaderboard'
+  header_first: 'Header first'
+  header_second: 'Header second'
+  navbar: 'Navbar'
+  messages: 'Messages'
+  highlighted: 'Highlighted'
+  features_first: 'Features first'
+  features_second: 'Features second'
+  features_third: 'Features third'
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  subcontent: 'Sub-content'
+  subfeatures_first: 'Sub-features first'
+  subfeatures_second: 'Sub-features second'
+  subfeatures_third: 'Sub-features third'
+  subfeatures_fourth: 'Sub-features fourth'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+features:
+    - node_user_picture
+    - comment_user_picture
+    - comment_user_verification
+    - favicon
+    - logo
+
+# Information added by Drupal.org packaging script on 2015-01-29
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'pixture_reloaded'
+datestamp: 1422561485

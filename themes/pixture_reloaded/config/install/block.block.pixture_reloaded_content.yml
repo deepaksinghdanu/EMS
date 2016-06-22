@@ -1,0 +1,13 @@
+id: pixture_reloaded_content
+theme: pixture_reloaded
+weight: 0
+status: true
+langcode: en
+region: content
+plugin: system_main_block
+settings:
+  label: 'Main page content'
+  provider: system
+  label_display: 0
+  cache:
+    max_age: 0

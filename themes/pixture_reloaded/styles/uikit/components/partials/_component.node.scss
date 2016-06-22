@@ -1,0 +1,135 @@
+/**
+ * Content Types (nodes)
+ *  - in Drupal a content type is a bunch of fields we use to enter and display
+ *    content, such as pages, blog posts, forum posts and so on. Each of those
+ *    is usually a content type you create in the Drupal admin.
+ *  - an instance of a content type (e.g. a single blog post) is called a node,
+ *    the root template is called node.html.twg and the base selector is .node {}
+ ========================================================================== */
+
+.node {
+  @include clearfix-micro;
+}
+
+
+// Content types
+.node--type-article {}
+.node--type-page {}
+.node--type-forum {}
+
+
+// States
+.node--promoted {}
+.node--sticky {}
+.node--unpublished {}
+
+
+// View modes
+.node--view-mode-full {
+  .node__title {
+    @include output-rhythm(margin, 0 0 $medium);
+  }
+}
+
+
+.node--view-mode-teaser {
+  @include output-rhythm(padding, $medium);
+  @include output-rhythm(margin-bottom, $medium);
+  border: $border-width $border-style;
+
+  .node__title {
+    border-bottom: $border-width $border-style;
+  }
+
+  .links {
+    margin: 0;
+  }
+}
+
+
+// Header - includes title (h1 full, h2 teaser), user picture, author and date.
+.node__header
+.node__title {
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+// Author name and date details.
+.node__meta {
+  @include output-rhythm(margin, $medium 0);
+
+  // Remove potentially empty article element.
+  article:empty {
+    display: none;
+  }
+
+  &.node__meta--has-author-picture {
+    //@include cf;
+  }
+
+  // User picture.
+  .field-type-image {
+    //max-width: 40px;
+    //@include output-rhythm(max-width, $xxxx-large);
+    float: $flow-from; // LTR
+    @include output-rhythm(padding-#{$flow-to}, $xx-small);
+
+    img {}
+  }
+}
+
+.node__submitted {}
+
+.node__author {
+  display: inline;
+  font-style: normal;
+}
+
+.node__datetime {}
+
+
+.node__meta--has-author-picture {
+  .node__submitted {
+    @include adjust-font-size-to($medium/1.125);
+    //@include output-rhythm(line-height, $xxxx-large);
+    //@include output-rhythm(padding, 0 $xx-small);
+    //overflow: hidden;
+  }
+}
+
+
+// Footer wraps links.
+.node__footer {
+  @include clearfix-micro;
+  clear: both;
+
+  .links {
+    text-align: $flow-to;
+  }
+}
+
+// Node fields
+.node {
+  .field-type-image figure {
+    border: $border-width $border-style;
+    @include output-rhythm(padding, $small);
+
+    &.caption {
+      border-bottom: 0;
+    }
+
+    figcaption {
+      border: $border-width $border-style;
+      border-top: 0;
+      @include output-rhythm(padding, 0 $small $small);
+    }
+  }
+}
+
+

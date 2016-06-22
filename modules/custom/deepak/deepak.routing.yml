@@ -1,0 +1,7 @@
+Deepak.content:
+  path: '/deepak'
+  defaults:
+    _controller: '\Drupal\deepak\Controller\DeepakController::content'
+    _title: 'Deepak'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if breadcrumb %}
+  {{ attach_library('at_core/at.responsivelists') }}
+  {%
+    set classes = [
+      'breadcrumb',
+      not breadcrumb_title_hidden ? 'has-title',
+    ]
+  %}
+  {%
+    set title_classes = [
+      breadcrumb_title_hidden ? 'visually-hidden',
+      'breadcrumb__title',
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    <nav class="is-responsive is-horizontal" role="navigation" aria-labelledby="system-breadcrumb-title" data-at-responsive-list>
+
+      <h2{{ title_attributes.addClass(title_classes).setAttribute('id', 'system-breadcrumb-title')}}>{{ 'You are here:'|t }}</h2>
+
+      <ol class="breadcrumb__list is-responsive__list">
+      {% for item in breadcrumb %}
+        {% set item_text = item.text|length > 32 ? item.text|slice(0, 32) ~ '...' : item.text %}
+        <li class="breadcrumb__list-item is-responsive__item">
+          {% if item.url %}
+            <a href="{{ item.url }}" class="breadcrumb__link">{{ item_text }}</a>
+          {% else %}
+            <span class="breadcrumb__link">{{ item_text }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ol>
+
+    </nav>
+  </div>
+{% endif %}

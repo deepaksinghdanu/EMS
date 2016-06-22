@@ -1,0 +1,66 @@
+/**
+ * Breadcrumbs
+ ========================================================================== */
+
+// Block wrapper for breadcrumbs
+.block-system-breadcrumb-block {
+  .block__content {}
+}
+
+
+.breadcrumb {
+  //@include output-rhythm(margin, $medium 0);
+
+  &__title {
+    font-size: inherit;
+  }
+
+  &__title,
+  ol,
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    &:before {
+      font-family: FontAwesome, sans-serif;
+      content: "\f105";  // fa-angle-right
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      @include output-rhythm(width, $medium);
+    }
+
+    &:first-child:before {
+      content: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+    }
+
+    &:active,
+    &.active {
+    }
+
+    &:hover,
+    &:focus {
+      //text-decoration: underline;
+    }
+  }
+
+  // RTL
+  @at-root [dir="rtl"] .breadcrumb li:before {
+    content: "\f104"; // RTL, fa-angle-left
+  }
+}
